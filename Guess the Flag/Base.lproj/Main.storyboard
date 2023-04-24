@@ -16,10 +16,62 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCC-8D-fO2">
+                                <rect key="frame" x="96" y="100" width="200" height="100"/>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="estonia"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t0O-Fl-evQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6R-BI-C68">
+                                <rect key="frame" x="96" y="230" width="201" height="100"/>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="z3j-cb-sg7"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="germany"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QRY-iZ-Hfg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0f-60-ZJC">
+                                <rect key="frame" x="96" y="360" width="201" height="100"/>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="4kK-vi-7sH"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="ireland"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lTd-rt-U5r"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="G0f-60-ZJC" secondAttribute="bottom" constant="358" id="5fp-oS-ZjW"/>
+                            <constraint firstItem="l6R-BI-C68" firstAttribute="top" secondItem="ZCC-8D-fO2" secondAttribute="bottom" constant="30" id="DHl-rz-4Cx"/>
+                            <constraint firstItem="ZCC-8D-fO2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="LCQ-7c-OjA"/>
+                            <constraint firstItem="G0f-60-ZJC" firstAttribute="centerX" secondItem="l6R-BI-C68" secondAttribute="centerX" id="OOz-tt-2ip"/>
+                            <constraint firstItem="G0f-60-ZJC" firstAttribute="top" secondItem="l6R-BI-C68" secondAttribute="bottom" constant="30" id="S89-Lw-8mt"/>
+                            <constraint firstItem="l6R-BI-C68" firstAttribute="trailing" secondItem="ZCC-8D-fO2" secondAttribute="trailing" id="XC0-nL-M0p"/>
+                            <constraint firstItem="l6R-BI-C68" firstAttribute="leading" secondItem="G0f-60-ZJC" secondAttribute="leading" id="fLH-Um-Odm"/>
+                            <constraint firstItem="l6R-BI-C68" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="96" id="kAi-QB-DzC"/>
+                            <constraint firstItem="l6R-BI-C68" firstAttribute="leading" secondItem="ZCC-8D-fO2" secondAttribute="leading" id="tp0-zz-oJC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="ZCC-8D-fO2" secondAttribute="top" constant="3" id="ypO-1K-EUc"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="37x-OL-UiR"/>
+                    <connections>
+                        <outlet property="button1" destination="ZCC-8D-fO2" id="5yw-OR-uhX"/>
+                        <outlet property="button2" destination="l6R-BI-C68" id="0QQ-qv-Wut"/>
+                        <outlet property="button3" destination="G0f-60-ZJC" id="ty4-EC-Lv4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -45,6 +97,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="estonia" width="200" height="100"/>
+        <image name="germany" width="200" height="100"/>
+        <image name="ireland" width="200" height="100"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
